@@ -150,7 +150,7 @@ export default function PrimoBook() {
                     <CartesianGrid stroke="#F1F5F9" strokeDasharray="3 3"/>
                     <XAxis dataKey="month" tick={{ fill: "#64748B", fontSize: 11 }} axisLine={false} tickLine={false}/>
                     <YAxis tick={{ fill: "#64748B", fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={fmtK}/>
-                    <Tooltip contentStyle={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 10, fontSize: 12 }} formatter={(v: number) => [fmt(v)]}/>
+                    <Tooltip contentStyle={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 10, fontSize: 12 }} formatter={(v: any) => [fmt(v)]}/>
                     <Area type="monotone" dataKey="revenue" stroke="#0B1F3A" strokeWidth={2.5} fill="url(#gR)"/>
                     <Area type="monotone" dataKey="expenses" stroke="#059669" strokeWidth={2} fill="url(#gE)" strokeDasharray="5 4"/>
                   </AreaChart>
@@ -164,7 +164,7 @@ export default function PrimoBook() {
                     <Pie data={CATS} cx="50%" cy="50%" innerRadius={45} outerRadius={72} paddingAngle={3} dataKey="value">
                       {CATS.map((c, i) => <Cell key={i} fill={c.color}/>)}
                     </Pie>
-                    <Tooltip contentStyle={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 12 }} formatter={(v: number) => [fmt(v)]}/>
+                    <Tooltip contentStyle={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 12 }} formatter={(v: any) => [fmt(v)]}/>
                   </PieChart>
                 </ResponsiveContainer>
                 <div style={{ display: "flex", flexDirection: "column", gap: 5, marginTop: 8 }}>
